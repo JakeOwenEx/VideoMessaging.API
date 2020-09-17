@@ -1,0 +1,21 @@
+{
+  "compilerOptions": {
+    "target": "es2020",
+    "module": "commonjs",
+    "rootDir": "./src",
+    "outDir": "./dist",
+    "strict": true,
+    "baseUrl": "./",
+    "typeRoots": [
+      "node_modules/@types"
+    ],
+    "types": [
+      "node",
+      "jest",
+      "aws-lambda"
+    ],
+    "esModuleInterop": true,
+    "inlineSourceMap": true
+  },
+  "exclude": ["tests"]
+}

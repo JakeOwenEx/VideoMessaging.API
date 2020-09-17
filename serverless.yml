@@ -1,0 +1,28 @@
+service: VideoMessaging.API
+
+frameworkVersion: ">=1.1.0 <2.0.0"
+
+provider:
+  role: arn:aws:iam::686976128650:role/video-messaging-api-role
+  stackName: video-messaging-api
+  name: aws
+  runtime: nodejs12.x
+  region: eu-west-1
+
+plugins:
+  - serverless-webpack
+
+custom:
+  webpack:
+    includeModules: true
+    webpackConfig: webpack.config.js
+
+functions:
+  videoMessagingApi:
+    name: video-messaging
+    handler: dist/sendVideo.acceptance-tests
+    events:
+      - http:
+          path: sendvideo
+          method: post
+          cors: true

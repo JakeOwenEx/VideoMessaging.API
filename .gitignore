@@ -1,0 +1,10 @@
+node_modules/
+dist/
+.idea/
+.DS_store
+terraform/.terraform
+# stryker temp files
+.stryker-tmp
+reports/
+.serverless/
+.webpack/
